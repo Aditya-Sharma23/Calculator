@@ -1,0 +1,167 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Dark golden-yellow background */
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #8a6b00,
+        #c49a00,
+        #705500
+    );
+}
+
+/* Blue calculator body */
+.calculator {
+    width: 100%;
+    max-width: 360px;
+    padding: 28px;
+    border-radius: 24px;
+
+    background: linear-gradient(
+        145deg,
+        #1769d2,
+        #084298
+    );
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.35),
+        inset 0 1px 2px rgba(255, 255, 255, 0.15);
+}
+
+/* Calculator heading */
+h1 {
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* White calculator screen */
+.display {
+    display: block;
+    width: 100%;
+    height: 80px;
+    margin-bottom: 22px;
+    padding: 15px;
+
+    border: 2px solid #dbeafe;
+    border-radius: 14px;
+    outline: none;
+
+    background: #ffffff;
+    color: #172554;
+
+    text-align: right;
+    font-size: 32px;
+    font-weight: 600;
+
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+/* Button grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+}
+
+/* Standard buttons */
+button {
+    min-width: 0;
+    height: 58px;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 13px;
+
+    background: #eaf2ff;
+    color: #12346b;
+
+    font-size: 20px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.12);
+
+    transition:
+        transform 0.15s ease,
+        background 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+/* Hover effect */
+button:hover {
+    background: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0 rgba(0, 0, 0, 0.12);
+}
+
+/* Click effect */
+button:active {
+    transform: translateY(2px);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.12);
+}
+
+/* Operator buttons */
+button.operator {
+    background: #ffc928;
+    color: #352500;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+button.operator:hover {
+    background: #ffdc6b;
+}
+
+/* Clear button */
+button.clear {
+    background: #ef4444;
+    color: #ffffff;
+}
+
+button.clear:hover {
+    background: #ff6666;
+}
+
+/* Equals button */
+button.equals {
+    background: #16a34a;
+    color: #ffffff;
+}
+
+button.equals:hover {
+    background: #22c55e;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 400px) {
+    .calculator {
+        padding: 20px;
+    }
+
+    button {
+        height: 52px;
+        font-size: 18px;
+    }
+
+    .display {
+        height: 70px;
+        font-size: 28px;
+    }
+}
